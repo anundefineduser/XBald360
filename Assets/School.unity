@@ -379,8 +379,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
+  m_SubmitButton: 
+  m_CancelButton: 
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
@@ -472,7 +472,7 @@ Transform:
   m_GameObject: {fileID: 1460000709}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -5, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -486,6 +486,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1942595969}
   - 143: {fileID: 1942595968}
+  - 114: {fileID: 1942595970}
+  - 136: {fileID: 1942595971}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -524,6 +526,34 @@ Transform:
   - {fileID: 532821405}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1942595970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1942595967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46cb4e0b20dca794f955f31e7d4fe987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cc: {fileID: 1942595968}
+  walkSpeed: 20
+  runSpeed: 0
+  sensitivity: 2
+--- !u!136 &1942595971
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1942595967}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2075149921
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +564,6 @@ GameObject:
   - 4: {fileID: 2075149925}
   - 20: {fileID: 2075149924}
   - 92: {fileID: 2075149923}
-  - 81: {fileID: 2075149922}
   m_Layer: 0
   m_Name: UICamera
   m_TagString: Untagged
@@ -542,13 +571,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2075149922
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2075149921}
-  m_Enabled: 1
 --- !u!92 &2075149923
 Behaviour:
   m_ObjectHideFlags: 0
@@ -586,7 +608,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
@@ -596,7 +618,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2075149921}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
