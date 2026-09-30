@@ -66,7 +66,7 @@ Shader "Baldi/BaldiEnvironmentShader"
 				// weird sampling math
 				if (uv.x > 0.) {
 					if (uv.x > 1.) {
-						uv.x = frac(uv.x);
+						uv.x -= floor(uv.x);
 					}
 				}
 
